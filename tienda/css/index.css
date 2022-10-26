@@ -1,0 +1,271 @@
+
+*{
+    box-sizing: border-box;
+    
+}
+
+/* 
+Por algun motivo el scroll suavizado no me lo toma en todo el html
+
+html {
+    scroll-behavior: smooth;
+}
+*/
+    
+
+
+body{
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    background-color: rgb(105, 78, 105);
+    
+}
+
+
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+
+ul {list-style-type:none;}
+h1{ font-size: 3.5em;}
+
+button{
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 10%;
+    background-color: rgb(136, 54, 118);
+
+}
+
+button:hover{
+    background-color:rgb(75, 13, 66);
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+
+}
+
+header{
+    background-color:whitesmoke;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight:bold ;
+    font-size: 1.6em;
+    color: blueviolet;
+    
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: grey;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(0deg, 
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url(/media/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+#La-tiendita .container {
+    text-align: center;
+    padding: 300px 12px;
+    color: whitesmoke;
+    background-image:  linear-gradient(0deg, 
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url(/media/la\ tiendita.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+   
+
+
+}
+
+#Nuestros-productos{
+    background-color: rgb(105, 78, 105); 
+    color: whitesmoke;
+    text-align: center;
+}
+
+#Nuestros-productos .container{
+    padding: 100px 0px;
+}
+
+#Nuestros-productos h2 {
+    margin-top: 0%;
+}
+
+#Nuestros-productos p {
+    display: none;
+}
+
+/*#Nuestros-programas .carta{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+}
+no me toma para las tres cartas el padding, ni margin, ni el border, tampoco los background. Tengo que poner uno a uno las propiedades del css
+
+*/
+
+
+.carta:first-child{
+    background-image:  linear-gradient(0deg, 
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url(/media/chocolate.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+
+
+
+.carta:nth-child(2){
+    background-image:  linear-gradient(0deg, 
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url(/media/caramelos.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+
+.carta:nth-child(3){
+    background-image:  linear-gradient(0deg, 
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5))
+    ,url(/media/snack.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 12px;
+    border-radius: 15px;
+}
+
+
+/* El "#" lo uso para llamar a cada id y despues seguido si va el "." mas "container" ( #caracteristicas .container ) es para selecionar una clase.
+y en el otro caso ( #caractericticas li ) es sin "." porque estoy seleccionando una etiqueta */
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 100px 12px;
+}
+
+#caracteristicas li {
+    margin: 16px 0px;
+    font-weight: bold;
+}
+
+#final{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: whitesmoke;
+    height: 50vh;
+}
+
+#final h2 {
+    font-size: 5vw;
+}
+
+footer{
+    background-color:black ;
+    
+}
+
+footer p {
+    color: azure;
+    margin: 0%;
+}
+
+footer .container{ 
+    height: 100px;
+}
+
+@media (min-width: 720px) {
+
+    header{
+        position: fixed;
+        width: 100%;
+    }
+
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #La-tiendita .container{
+    justify-content: center;
+    }
+
+    #La-tiendita p{
+        
+        justify-content: center;
+        text-align: center;
+        padding: 0px 30px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
